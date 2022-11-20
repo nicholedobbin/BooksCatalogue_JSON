@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Book Catalogue</title>
+    </head>
+    <body> 
+        <h1 id="header">Store your favourite books here</h1>
+        <h3>Enter details of the book you want to add</h3>
+        <form action = "" id = "myForm">
+            <label for="title">Enter book title: </label>
+            <input type="text" name="title" id="title" autocomplete="off" required>
+            <br>
+            <label for="author">Enter book author: </label>
+            <input type="text" name="author" id="author" autocomplete="off" required>
+            <br>
+            <label for="genre">Enter book genre: </label>
+            <input type="text" name="genre" id="genre" autocomplete="off" required>
+            <br>
+            <label for="rating">Rate this book out of 5</label>
+            <select id="rating">
+                <option value="">--Please choose an option--</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <br>
+            <button type="button" value="resetForm" id="addBookBtn" onclick="addBook()">Add Your Book</button>
+        </form>
+        <hr>
+        <h3>My Favourite Books</h3>
+        <ul id="favouritesList"></ul>
+        <br>
+        <h4>Select a book you want to edit</h4>
+        <select id="selectList" onchange="editBook(this.value)"> 
+            <option value="">--Please choose a book object--</option>
+        </select>
+        <script type="text/javascript" src="catalogue.js"></script>
+    </body>
+</html>
